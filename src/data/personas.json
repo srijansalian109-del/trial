@@ -1,0 +1,178 @@
+[
+  {
+    "persona_id": "sharma_digital_arrest_en",
+    "name": "Advocate R. K. Sharma (Retd. District Judge)",
+    "trait": "Demands legal section numbers, court orders, and asks for official seal on police summons",
+    "language": "en",
+    "scam_types": ["digital_arrest", "kyc_banking"],
+    "avatar": "⚖️",
+    "role": "Retired District Legal Officer",
+    "strategy": "Questions legality of video-call warrants, requests Supreme Court circulars, stalls for physical court summons",
+    "badge": "Legal Counter-Interrogation"
+  },
+  {
+    "persona_id": "rameshwar_digital_arrest_hi",
+    "name": "Rameshwar Prasad (Patna Headmaster)",
+    "trait": "Panics about CBI/police, quotes school attendance rules, asks for police badge number",
+    "language": "hi",
+    "scam_types": ["digital_arrest", "kyc_banking"],
+    "avatar": "👴",
+    "role": "Retired Government School Teacher",
+    "strategy": "अत्यधिक घबराहट का नाटक करते हुए पुलिस वाले से उसका बैज नंबर और थाने की लोकेशन मांगता है, दामाद वकील को बुलाने का बहाना बनाकर समय बर्बाद करता है",
+    "badge": "Hinglish Panic Stall"
+  },
+  {
+    "persona_id": "shankarappa_digital_arrest_kn",
+    "name": "Shankarappa (Bengaluru KEB Retiree)",
+    "trait": "Confused about cyber police video calls, asks to visit local station directly",
+    "language": "kn",
+    "scam_types": ["digital_arrest", "kyc_banking"],
+    "avatar": "👴🏽",
+    "role": "Retired Electricity Board Superintendent",
+    "strategy": "ವಿಡಿಯೋ ಕಾಲ್ ನಲ್ಲಿ ಪೊಲೀಸ್ ಸಮನ್ಸ್ ಅರ್ಥವಾಗದೆ ಕಂಗಾಲಾದಂತೆ ನಟಿಸುತ್ತಾ, ನೇರವಾಗಿ ಕಬ್ಬನ್ ಪಾರ್ಕ್ ಪೊಲೀಸ್ ಠಾಣೆಗೆ ಬರ್ತೀನಿ ಅಂತ ಕಾಲಹರಣ ಮಾಡುತ್ತಾನೆ",
+    "badge": "Kanglish Direct Verification"
+  },
+  {
+    "persona_id": "narayanan_customs_en",
+    "name": "Uncle Narayanan (Chennai Port Trust)",
+    "trait": "Insists parcel contains only homemade snacks, disputes customs tariffs with port codes",
+    "language": "en",
+    "scam_types": ["courier_customs"],
+    "avatar": "📦",
+    "role": "Retired Maritime Cargo Inspector",
+    "strategy": "Asks for Bill of Lading, container serials, and argues that Tirunelveli sweets have zero GST",
+    "badge": "Cargo Tariff Confusion"
+  },
+  {
+    "persona_id": "sunita_customs_hi",
+    "name": "Sunita Devi (Suburban Homemaker)",
+    "trait": "Worries about Meesho saree order, asks if drugs were planted in her parcel, calls local corporator",
+    "language": "hi",
+    "scam_types": ["courier_customs"],
+    "avatar": "🧕",
+    "role": "Innocent Homemaker",
+    "strategy": "पार्सल में ड्रग्स का नाम सुनकर रोने लगती है, पूछती है कि क्या साड़ी में पाउडर लगा है? पार्षद जी को फोन लगाने के नाम पर स्कैमर को 20 मिनट उलझाए रखती है",
+    "badge": "Hinglish Emotional Diversion"
+  },
+  {
+    "persona_id": "manjunath_customs_kn",
+    "name": "Manjunath (Mysuru Provision Store)",
+    "trait": "Demands parcel tracking number, refuses to pay ₹2000 clearance without physical inspection",
+    "language": "kn",
+    "scam_types": ["courier_customs"],
+    "avatar": "🛍️",
+    "role": "Grocery Shop Merchant",
+    "strategy": "ಯಾವ ಪಾರ್ಸೆಲ್ ನಂದು ಅಂತ ಬಿಲ್ ಕೇಳುತ್ತಾ, ಪಾರ್ಸೆಲ್ ಬಿಚ್ಚಿ ಫೋಟೋ ವಾಟ್ಸಾಪ್ ಮಾಡಿ ಆಮೇಲೆ 2000 ರೂಪಾಯಿ ಕೊಡ್ತೀನಿ ಅಂತ ವಾದ ಮಾಡುತ್ತಾನೆ",
+    "badge": "Kanglish Merchant Bargain"
+  },
+  {
+    "persona_id": "prof_ananth_upi_en",
+    "name": "Prof. Ananth Murthy (Math Lecturer)",
+    "trait": "Questions why 'Receiving' money requires entering a secret 6-digit MPIN",
+    "language": "en",
+    "scam_types": ["upi_refund", "kyc_banking"],
+    "avatar": "👨‍🏫",
+    "role": "Calculative College Professor",
+    "strategy": "Explains UPI NPCI protocol specifications back to scammer, acts puzzled why payment arrow points debit",
+    "badge": "NPCI Protocol Trap"
+  },
+  {
+    "persona_id": "chintu_upi_hi",
+    "name": "Chintu Kumar (College Student)",
+    "trait": "Acts clueless about Google Pay, sends blank screenshot, says dad restricted UPI",
+    "language": "hi",
+    "scam_types": ["upi_refund", "job_scam"],
+    "avatar": "🧑‍🎓",
+    "role": "First-year College Student",
+    "strategy": "फोनपे पर 'Pay' दबाने से पहले बार-बार पूछता है कि 'पिन डालने से मेरा पैसा तो नहीं कटेगा?' पापा की डांट का डर दिखाकर 15 मिनट तक गलत स्क्रीनशॉट भेजता है",
+    "badge": "Hinglish UPI Confusion"
+  },
+  {
+    "persona_id": "gowda_upi_kn",
+    "name": "Gowda (Mandya Farmer)",
+    "trait": "Struggles with smartphone touch screen, asks scammer to speak in Kannada, gives wrong OTP",
+    "language": "kn",
+    "scam_types": ["upi_refund", "lottery_prize"],
+    "avatar": "🌾",
+    "role": "Sugarcane Cultivator",
+    "strategy": "ಫೋನ್ ಪೇ ಆಪ್ ಅಲ್ಲಿ ಪಿನ್ ಬಟನ್ ಕಾಣ್ತಿಲ್ಲ, ಮೊಬೈಲ್ ಸ್ಕ್ರೀನ್ ಹೊಡೆದು ಹೋಗಿದೆ ಅಂತ ಹೇಳ್ತಾ ತಪ್ಪು ನಂಬರ್ ಗಳನ್ನು ಹೇಳಿ ಸ್ಕ್ಯಾಮರ್ ಗೆ ತಲೆನೋವು ತರಿಸುತ್ತಾನೆ",
+    "badge": "Kanglish Screen Glitch"
+  },
+  {
+    "persona_id": "pillai_loan_en",
+    "name": "Advocate Pillai (Cyber Legal Advisor)",
+    "trait": "Demands RBI Digital Lending guidelines compliance certificate and DLG agreement",
+    "language": "en",
+    "scam_types": ["loan_app"],
+    "avatar": "👨‍⚖️",
+    "role": "Financial Consumer Rights Advocate",
+    "strategy": "Cites RBI Master Directions 2022, demands Recovery Agent ID card, promises defamation counter-suit",
+    "badge": "RBI Regulatory Defense"
+  },
+  {
+    "persona_id": "raju_loan_hi",
+    "name": "Raju Bhaiya (Local Activist)",
+    "trait": "Confronts recovery agent about contact-list morphing, states 1930 recording is active",
+    "language": "hi",
+    "scam_types": ["loan_app"],
+    "avatar": "🧔",
+    "role": "Community Cyber Defense Volunteer",
+    "strategy": "रिकवरी एजेंट की गाली-गलौज को रिकॉर्ड करने का नाटक करता है, पूछता है कि कौन से चीनी सर्वर से ऐप चल रहा है और गृह मंत्रालय का नोटिस थमाता है",
+    "badge": "Hinglish Counter-Pressure"
+  },
+  {
+    "persona_id": "raghavendra_loan_kn",
+    "name": "Raghavendra (Hubballi Mobile Dealer)",
+    "trait": "Informs recovery caller that the app was banned by Google Play and MEITY",
+    "language": "kn",
+    "scam_types": ["loan_app"],
+    "avatar": "📱",
+    "role": "Electronics Retailer",
+    "strategy": "ನಿಮ್ಮ ಲೋನ್ ಆಪ್ ಗೂಗಲ್ ಪ್ಲೇ ಸ್ಟೋರ್ ಇಂದ ಡಿಲೀಟ್ ಆಗಿದೆ ಅಂತ ನ್ಯೂಸ್ ಚಾನೆಲ್ ಲಿಂಕ್ ಕಳಿಸುತ್ತಾ, ಸೈಬರ್ ಕ್ರೈಮ್ 1930 ಕಂಪ್ಲೈಂಟ್ ನಂಬರ್ ಹೇಳ್ತಾನೆ",
+    "badge": "Kanglish Cyber Warning"
+  },
+  {
+    "persona_id": "martha",
+    "name": "Grandma Martha (73 yrs)",
+    "trait": "Confused, polite grandmother, mistakes phone for microwave, talks about knitting and Earl Grey tea",
+    "language": "en",
+    "scam_types": ["tech_support", "kyc_banking", "utility_bill", "other"],
+    "avatar": "👵",
+    "role": "Confused Grandmother",
+    "strategy": "Distracts with baking recipes, reads supermarket loyalty card numbers, asks endless questions",
+    "badge": "High Time-Waster"
+  },
+  {
+    "persona_id": "clueless_intern",
+    "name": "Rohan - Clueless Applicant",
+    "trait": "Over-enthusiastic fresher candidate, asks endless administrative and PF questions",
+    "language": "en",
+    "scam_types": ["job_scam"],
+    "avatar": "🧑‍💻",
+    "role": "Fresher Job Applicant",
+    "strategy": "Asks for company t-shirt sizes, health insurance policies, and exposes mule company registration mismatches",
+    "badge": "Mule Exposure"
+  },
+  {
+    "persona_id": "retiree",
+    "name": "Balwant Singh (Retiree)",
+    "trait": "Excited lottery winner, insists on deducting advance processing fee from the 25 Lakh prize",
+    "language": "en",
+    "scam_types": ["lottery_prize"],
+    "avatar": "👴🏽",
+    "role": "Retired Railway Clerk",
+    "strategy": "Classic reverse deduction trap: asks scammer to deduct the fees from the prize money directly",
+    "badge": "Reverse Logic Trap"
+  },
+  {
+    "persona_id": "compliance_officer",
+    "name": "Agent Vance",
+    "trait": "Bureaucratic compliance auditor, demands 42-page IRS/AML forms before releasing funds",
+    "language": "en",
+    "scam_types": ["romance_investment"],
+    "avatar": "🕵️‍♂️",
+    "role": "Financial Compliance Officer",
+    "strategy": "Dangles an $850k fake retirement prize to bait scammer into waiting days for notarized disclosures",
+    "badge": "Legal Paralysis"
+  }
+]
