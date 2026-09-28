@@ -272,6 +272,7 @@ app.post('/api/analyze', async (req: Request, res: Response) => {
     sessionsStore.set(demoResult.id, demoResult);
     sessionsStore.set(sessionId, demoResult);
     registerIndicatorsToBlocklist(demoResult, sessionId);
+    await saveBlocklistToDatabase();
     totalScammerMinutesWasted += demoResult.estimatedTimeWastedMinutes;
     totalAnalyzedMessages += 1;
     return res.json(demoResult);
@@ -287,6 +288,7 @@ app.post('/api/analyze', async (req: Request, res: Response) => {
         sessionsStore.set(demoResult.id, demoResult);
         sessionsStore.set(sessionId, demoResult);
         registerIndicatorsToBlocklist(demoResult, sessionId);
+        await saveBlocklistToDatabase();
         totalScammerMinutesWasted += demoResult.estimatedTimeWastedMinutes;
         totalAnalyzedMessages += 1;
         return res.json(demoResult);
@@ -337,6 +339,7 @@ app.post('/api/analyze', async (req: Request, res: Response) => {
     sessionsStore.set(localResult.id, localResult);
     sessionsStore.set(sessionId, localResult);
     registerIndicatorsToBlocklist(localResult, sessionId);
+    await saveBlocklistToDatabase();
     totalScammerMinutesWasted += localResult.estimatedTimeWastedMinutes;
     totalAnalyzedMessages += 1;
     return res.json(localResult);
@@ -503,6 +506,7 @@ Respond ONLY with a JSON object adhering to this schema:
     sessionsStore.set(result.id, result);
     sessionsStore.set(sessionId, result);
     registerIndicatorsToBlocklist(result, sessionId);
+    await saveBlocklistToDatabase();
     totalScammerMinutesWasted += result.estimatedTimeWastedMinutes;
     totalAnalyzedMessages += 1;
     return res.json(result);
@@ -537,6 +541,7 @@ Respond ONLY with a JSON object adhering to this schema:
     sessionsStore.set(fallbackResult.id, fallbackResult);
     sessionsStore.set(sessionId, fallbackResult);
     registerIndicatorsToBlocklist(fallbackResult, sessionId);
+    await saveBlocklistToDatabase();
     totalScammerMinutesWasted += fallbackResult.estimatedTimeWastedMinutes;
     totalAnalyzedMessages += 1;
     return res.json(fallbackResult);
@@ -800,6 +805,8 @@ async function startServer() {
   });
 }
 
-startServer().catch((err) => {
-  console.error('[ScamBait Server Startup Error]:', err);
-});
+loadBlocklistFromDatabase()
+  .then(() => startServer())
+  .catch((err) => {
+    console.error('[ScamBait Server Startup Error]:', err);
+  });
