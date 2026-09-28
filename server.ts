@@ -2,6 +2,7 @@ import express, { Request, Response } from 'express';
 import dotenv from 'dotenv';
 import path from 'path';
 import { GoogleGenAI } from '@google/genai';
+import { supabase } from './db.ts';
 import { INITIAL_BLOCKLIST } from './src/data/seedBlocklist.ts';
 import { PRECOMPUTED_DEMO_RESULTS, DEMO_CASES } from './src/data/demoCases.ts';
 import { extractIndicatorsLocally, classifyThreatHeuristically, generateBaitDialogue, detectLanguage } from './server/threatEngine.ts';
@@ -96,6 +97,75 @@ function registerIndicatorsToBlocklist(result: AnalysisResult, sessionId: string
   indicators.urls.forEach((u) => addOrUpdate('url', u));
   indicators.bankAccounts.forEach((b) => addOrUpdate('bank', b));
   indicators.cryptoWallets.forEach((w) => addOrUpdate('wallet', w));
+}
+async function saveBlocklistToDatabase() {
+  const rows = blocklistStore.map((entry) => ({
+    id: entry.id,
+    type: entry.type,
+    value: entry.value,
+    normalized_value: entry.normalizedValue || null,
+    category: entry.category,
+    category_label: entry.categoryLabel,
+    threat_level: entry.threatLevel,
+    flag_count: entry.flagCount,
+    first_reported: entry.firstReported,
+    last_seen: entry.lastSeen,
+    impersonated_brand: entry.impersonatedBrand || null,
+    status: entry.status,
+    verification_status: entry.verificationStatus,
+    session_ids: entry.sessionIds || [],
+    notes: entry.notes || null
+  }));
+
+  if (rows.length === 0) return;
+
+  const { error } = await supabase
+    .from('blocklist')
+    .upsert(rows);
+
+  if (error) {
+    console.error('[ScamBait DB Error]', error);
+  } else {
+    console.log(`[ScamBait DB] Saved ${rows.length} blocklist records`);
+  }
+}
+async function loadBlocklistFromDatabase() {
+  const { data, error } = await supabase
+    .from('blocklist')
+    .select('*')
+    .order('created_at', { ascending: false });
+
+  if (error) {
+    console.error('[ScamBait DB Load Error]', error);
+    return;
+  }
+
+  if (!data || data.length === 0) {
+    console.log('[ScamBait DB] No saved blocklist records found.');
+    return;
+  }
+
+  blocklistStore = data.map((row: any) => ({
+    id: row.id,
+    type: row.type,
+    value: row.value,
+    normalizedValue: row.normalized_value,
+    category: row.category,
+    categoryLabel: row.category_label,
+    threatLevel: row.threat_level,
+    flagCount: row.flag_count,
+    firstReported: row.first_reported,
+    lastSeen: row.last_seen,
+    impersonatedBrand: row.impersonated_brand || undefined,
+    status: row.status,
+    verificationStatus: row.verification_status,
+    sessionIds: row.session_ids || [],
+    notes: row.notes || undefined,
+  }));
+
+  console.log(
+    `[ScamBait DB] Loaded ${blocklistStore.length} blocklist records`
+  );
 }
 
 // 0. FEATURE 4: /api/quick-detect (Detect-First instant risk assessment)
